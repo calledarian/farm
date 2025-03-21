@@ -6,6 +6,7 @@ body {
 }
 
 /* Remove default link styling */
+/* Remove default link styling */
 a {
     text-decoration: none;
     color: inherit;
@@ -33,6 +34,7 @@ a:hover::after {
     transform: scaleX(1);
 }
 
+
 /* Header Styles */
 header {
     background-color: #006400;
@@ -44,19 +46,22 @@ header {
 header nav ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
 header nav ul li a {
     color: white;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 /* Navigation Hover Effect */
 header nav ul li a:hover {
-    color: #32cd32;
+    color: #32cd32;  /* Green color on hover */
 }
 
 /* About Hero Section */

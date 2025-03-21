@@ -173,3 +173,16 @@ nav ul li a:hover {
   color: #0056b3; /* Change to your desired hover color */
   text-decoration: underline;
 }
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
