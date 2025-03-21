@@ -212,3 +212,14 @@ header nav ul li a:hover {
         font-size: 1em;
     }
 }
+
+.faq-link {
+    color: #007BFF; /* Change to your desired color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.faq-link:hover {
+    color: #0056b3; /* Change to your desired hover color */
+    text-decoration: underline;
+}

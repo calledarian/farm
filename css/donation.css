@@ -121,28 +121,6 @@ header nav ul li a:hover {
     border-radius: 5px;
 }
 
-.other-methods ul {
-    list-style: none;
-    padding: 0;
-}
-
-.other-methods ul li {
-    background: #32cd32;
-    color: white;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, filter 0.3s ease;
-}
-
-.other-methods ul li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
-    background-color: #28a745;
-    filter: brightness(1.1);
-}
-
-/* Footer Styles */
 /* Footer */
 footer {
     background-color: #333;
@@ -174,4 +152,15 @@ header nav ul li a:hover {
     .donation-info, .other-methods {
         margin: 10px;
     }
+}
+
+.faq-link {
+    color: #007BFF; /* Change to your desired color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.faq-link:hover {
+    color: #0056b3; /* Change to your desired hover color */
+    text-decoration: underline;
 }
