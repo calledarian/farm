@@ -1,0 +1,363 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Remove default link styling */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #32cd32; /* Green underline */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+a:hover {
+    color: #32cd32; /* Green color on hover */
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* Header Styles */
+header {
+    background-color: #006400;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Navigation Hover Effect */
+header nav ul li a:hover {
+    color: #32cd32;  /* Green color on hover */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('https://source.unsplash.com/1600x900/?farm');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+}
+
+/* Dark overlay to make text readable */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.hero p {
+    font-style: italic;
+    font-size: 1.4em;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.intro h3 {
+    font-size: 2em;
+}
+
+.intro p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Quick Links Section (4 Boxes) */
+.quick-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    flex-wrap: wrap; /* Makes layout responsive */
+}
+
+.quick-links .link {
+    background-color: #006400;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover Effect for the Boxes */
+.quick-links .link:hover {
+    transform: scale(1.1); /* Enlarges the box */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); /* Bigger shadow */
+    background-color: #32cd32; /* Light green hover */
+    filter: brightness(1.1);
+}
+
+.quick-links .link a {
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.quick-links .link:hover a {
+    color: #006400;
+}
+
+/* Gallery Section */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 40px 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image Hover Effect */
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .quick-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quick-links .link {
+        width: 80%;
+    }
+}
+
+/* Map Section */
+.map {
+    text-align: right;
+    padding: 40px 20px;
+}
+
+.map h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.map iframe {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Form Section */
+.contact-form {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.contact-form h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    text-align: left;
+    font-size: 1.1em;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #32cd32;
+    outline: none;
+}
+
+.contact-form .submit-btn {
+    background-color: #32cd32;
+    color: white;
+    font-size: 1.1em;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .submit-btn:hover {
+    background-color: #228b22;
+}
+
+.contact-info {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.contact-hero {
+    background-color:darkgrey ;
+    background-size: cover;
+    background-position: center;
+    color: rgb(0, 0, 0);
+    padding: 100px 20px;
+}
+.contact-contant {
+    font-size: 1.1em;
+    color: #333;
+}
+
+
+/* Contact Section */
+.contact-section {
+    display: flex; /* Flexbox to arrange photo and details side by side */
+    justify-content: start; /* Align items from the start */
+    align-items: center; /* Vertically center the items */
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: left;
+    width: 100%;
+    height: auto;
+}
+
+
+
+.person-info {
+    display: flex; /* Arrange photo and contact info horizontally */
+    align-items: center; /* Vertically align items */
+    border: 5px solid black; /* Add the border to the contact details */
+    border-radius: 20px; /* Round the corners of the border */
+    padding: 20px; /* Optional: Adjust padding inside the bordered area */
+}
+
+.photo-container {
+    width: 120px; /* Adjust the size of the image */
+    height: 120px;
+    border-radius: 50%; /* Circular image */
+    overflow: hidden;
+    margin-right: 20px; /* Space between the image and the text */
+    border: 2px solid #000000; /* Green border around the image */
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make sure the image fills the circle */
+}
+
+.photo-container:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+
+
+.contact-details h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin: 0;
+}
+
+.contact-details .job-title {
+    font-size: 1.2em;
+    color: #555; /* Slightly lighter color for the job title */
+    font-weight: normal;
+    margin-left: 10px; /* Add space between the name and job title */
+}
+
+.contact-details p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}

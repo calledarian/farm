@@ -1,0 +1,214 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Remove default link styling */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #32cd32; /* Green underline */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+a:hover {
+    color: #32cd32; /* Green color on hover */
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* Header Styles */
+header {
+    background-color: #006400;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Navigation Hover Effect */
+header nav ul li a:hover {
+    color: #32cd32;  /* Green color on hover */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('/Photos/cattleandzach.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
+    z-index: -1;
+}
+
+.hero h2 {
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px 0;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Add text shadow */
+}
+
+.hero p {
+    font-style: italic;
+    font-size: 1.2em;
+    max-width: 80%;
+    margin: 20px auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add text shadow */
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.intro h3 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgb(202, 190, 190);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/* Quick Links Section */
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.quick-links .link {
+    background-color: #32cd32;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, filter 0.3s ease;
+    overflow: hidden;
+}
+
+.quick-links .link a {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.quick-links .link:hover {
+    transform: translateY(-10px) scale(1.05); /* Added scale effect */
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25); /* Enhanced shadow */
+    background-color: #28a745; /* Slightly darker green */
+    filter: brightness(1.1);
+}
+
+.quick-links .link:hover a {
+    color: #006400; /* Dark green on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Navigation Links Hover Effect */
+header nav ul li a:hover {
+    color: #32cd32;  /* Green color on hover */
+}
+
+/* Accessibility Focus State for Quick Links */
+.quick-links .link a:focus {
+    outline: 3px solid #32cd32; /* Green focus outline */
+}
+
+/* Responsive Layout for Mobile */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.2em;
+    }
+
+    .hero p {
+        font-size: 1.3em;
+        max-width: 90%;
+    }
+
+    .quick-links {
+        grid-template-columns: 1fr; /* Stack the links vertically on small screens */
+    }
+
+    /* Adjust font sizes for intro section */
+    .intro h3 {
+        font-size: 1.8em;
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+}
