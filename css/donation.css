@@ -65,7 +65,7 @@ header nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: url('donation-bg.jpg') center/cover no-repeat;
+    background: url('/Photos/bless.jpg') center/cover no-repeat;
     color: white;
     padding: 100px 20px;
     text-align: center;
