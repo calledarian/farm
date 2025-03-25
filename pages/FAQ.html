@@ -1,84 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/Photos/csp.jpg" title="icon" sizes="any">
-  <link rel="stylesheet" href="/css/FAQ.css">
-  <title>FAQ | CSP</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/Photos/csp.jpg" title="icon" sizes="any" />
+    <link rel="stylesheet" href="/css/FAQ.css" />
+    <title>FAQ | CSP</title>
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-              <li><a href="/home.html">Home</a></li>
-              <li><a href="/pages/about.html">About Us</a></li>
-              <li><a href="/pages/donation.html">Donation</a></li>
-              <li><a href="/pages/contact.html">Contact</a></li>
-              <li><a href="/pages/products.html">Products</a></li>
-              <li><a href="/pages/FAQ.html" class="faq-link">FAQ</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="/home.html">Home</a></li>
+          <li><a href="/pages/about.html">About Us</a></li>
+          <li><a href="/pages/donation.html">Donation</a></li>
+          <li><a href="/pages/contact.html">Contact</a></li>
+          <li><a href="/pages/products.html">Products</a></li>
+          <li><a href="/pages/FAQ.html" class="faq-link">FAQ</a></li>
+        </ul>
+      </nav>
     </header>
-  <div class="faq-container">
-    <h2 class="faq-title">Common Questions About Donations</h2>
-    
-    <button class="accordion">1. How will my donation be used?</button>
-    <div class="panel">
-      <p>Your donation will help support our farm's sustainability efforts, including buying seeds, maintaining eco-friendly equipment, expanding farming practices, and covering the costs of artificial insemination and vaccinations for our livestock. It will also create job opportunities for local people, support ecological restoration, and help improve our food systems.</p>
+    <div class="faq-container">
+      <h2 class="faq-title">Common Questions About Donations</h2>
+
+      <button class="accordion">1. How will my donation be used?</button>
+      <div class="panel">
+        <p>
+          Your donation will help support our farm's sustainability efforts,
+          including buying seeds, maintaining eco-friendly equipment, expanding
+          farming practices, and covering the costs of artificial insemination
+          and vaccinations for our livestock. It will also create job
+          opportunities for local people, support ecological restoration, and
+          help improve our food systems.
+        </p>
+      </div>
+
+      <button class="accordion">2. What impact will my donation make?</button>
+      <div class="panel">
+        <p>
+          Your donation will have a significant impact by allowing us to drive
+          this project forward at a faster pace. It will help fund essential
+          initiatives, such as sustainable farming practices, Bible Education
+          Centers, and community support programs, enabling us to make a lasting
+          difference in Cambodia and beyond.
+        </p>
+      </div>
+
+      <button class="accordion">
+        3. What are the long-term goals of the project?
+      </button>
+      <div class="panel">
+        <p>
+          The long-term goals of our project are to create a self-sustaining
+          farm that provides support to the local community through sustainable
+          farming practices. We aim to fund and build Bible Education Centers,
+          create job opportunities for locals, and develop a space for Bible
+          school events. Once we start earning money, we also hope to extend our
+          support to other countries. Ultimately, we strive to strengthen the
+          work of preaching in Cambodia and promote long-lasting, positive
+          change for the community.
+        </p>
+      </div>
+
+      <button class="accordion">
+        4. Can I donate in different ways (e.g., monthly, in-kind,
+        volunteering)?
+      </button>
+      <div class="panel">
+        <p>
+          Yes, there are several ways you can contribute to our mission! You can
+          donate monthly, offer in-kind donations, or volunteer your time.
+          Volunteers can stay at the farm and teach the locals the Bible, or
+          help with farm improvements. Every form of support makes a big
+          difference, and we are grateful for your involvement!
+        </p>
+      </div>
+
+      <button class="accordion">
+        5. How will I receive updates on the progress of the project?
+      </button>
+      <div class="panel">
+        <p>
+          We provide regular updates through our website, social media, and
+          newsletters. As a donor, you will receive quarterly reports detailing
+          how your contribution has been used and the impact it has made. We
+          will also share success stories and project milestones with our
+          community.
+        </p>
+      </div>
+
+      <button class="accordion">6. Are donations tax-deductible?</button>
+      <div class="panel">
+        <p>
+          Yes, all donations made to our project are tax-deductible, as we are a
+          registered nonprofit organization. You will receive a receipt for your
+          contribution, which can be used for your tax filings.
+        </p>
+      </div>
+
+      <button class="accordion">
+        7. What is the track record of the project?
+      </button>
+      <div class="panel">
+        <p>
+          Our project is still in its early stages, but we are committed to
+          building a strong foundation for sustainable farming and community
+          development in Cambodia. We have successfully begun implementing key
+          initiatives such as acquiring land for the farm, setting up
+          eco-friendly practices, and developing partnerships to support our
+          mission. As we grow, we will continue to share updates on our progress
+          and the impact of your support.
+        </p>
+      </div>
     </div>
 
-    <button class="accordion">2. What impact will my donation make?</button>
-    <div class="panel">
-      <p>Your donation will have a significant impact by allowing us to drive this project forward at a faster pace. It will help fund essential initiatives, such as sustainable farming practices, Bible Education Centers, and community support programs, enabling us to make a lasting difference in Cambodia and beyond.</p>
-    </div>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
 
-    <button class="accordion">3. What are the long-term goals of the project?</button>
-    <div class="panel">
-      <p>The long-term goals of our project are to create a self-sustaining farm that provides support to the local community through sustainable farming practices. We aim to fund and build Bible Education Centers, create job opportunities for locals, and develop a space for Bible school events. Once we start earning money, we also hope to extend our support to other countries. Ultimately, we strive to strengthen the work of preaching in Cambodia and promote long-lasting, positive change for the community.</p>
-    </div>
-
-    <button class="accordion">4. Can I donate in different ways (e.g., monthly, in-kind, volunteering)?</button>
-    <div class="panel">
-      <p>Yes, there are several ways you can contribute to our mission! You can donate monthly, offer in-kind donations, or volunteer your time. Volunteers can stay at the farm and teach the locals the Bible, or help with farm improvements. Every form of support makes a big difference, and we are grateful for your involvement!</p>
-    </div>
-
-    <button class="accordion">5. How will I receive updates on the progress of the project?</button>
-    <div class="panel">
-      <p>We provide regular updates through our website, social media, and newsletters. As a donor, you will receive quarterly reports detailing how your contribution has been used and the impact it has made. We will also share success stories and project milestones with our community.</p>
-    </div>
-
-    <button class="accordion">6. Are donations tax-deductible?</button>
-    <div class="panel">
-      <p>Yes, all donations made to our project are tax-deductible, as we are a registered nonprofit organization. You will receive a receipt for your contribution, which can be used for your tax filings.</p>
-    </div>
-
-    <button class="accordion">7. What is the track record of the project?</button>
-    <div class="panel">
-      <p>Our project is still in its early stages, but we are committed to building a strong foundation for sustainable farming and community development in Cambodia. We have successfully begun implementing key initiatives such as acquiring land for the farm, setting up eco-friendly practices, and developing partnerships to support our mission. As we grow, we will continue to share updates on our progress and the impact of your support.
+    <footer>
+      <p>
+        © 2025 Christadelphian Sustainability Farm | All content shared with
+        love.
       </p>
-    </div>
-
-  </div>
-
-  <script>
-    var acc = document.getElementsByClassName("accordion");
-    for (var i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "block";
-        }
-      });
-    }
-  </script>
-
-<footer>
-  <p>© 2025 Christadelphian Sustainability Farm | All content shared with love.</p>
-</footer>
-
-</body>
+    </footer>
+  </body>
 </html>
