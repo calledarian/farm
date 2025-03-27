@@ -186,3 +186,12 @@ footer {
 footer p {
   margin: 0;
 }
+
+.lazy {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.lazy.loaded {
+  opacity: 1;
+}

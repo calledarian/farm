@@ -271,3 +271,11 @@ header nav ul li a:hover {
 .card-btn:active {
   transform: translateY(3px);
 }
+.lazy {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.lazy.loaded {
+  opacity: 1;
+}

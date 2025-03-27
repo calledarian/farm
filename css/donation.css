@@ -170,3 +170,12 @@ header nav ul li a:hover {
   color: red;
   font-weight: bold;
 }
+
+.lazy {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.lazy.loaded {
+  opacity: 1;
+}
