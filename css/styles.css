@@ -192,6 +192,7 @@ header nav ul li a:hover {
   gap: 20px;
   flex-wrap: wrap;
   padding: 20px;
+  display: flex;
 }
 .card {
   --font-color: #323232;

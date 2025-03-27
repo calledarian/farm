@@ -77,6 +77,14 @@ header nav ul li a:hover {
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 }
 
+.about-hero p {
+  font-style: italic;
+  font-size: 19px;
+  max-width: 80%;
+  margin: 20px auto;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add text shadow */
+}
+
 .about-hero::before {
   content: "";
   position: absolute;
